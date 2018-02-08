@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+    <item
+        android:id="@+id/on_off_action_menu"
+        android:title="@string/on_off"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/conn_status_action_menu"
+        android:title=""
+        android:icon="@drawable/ic_swap_horiz_white_24dp"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/batt_status_action_menu"
+        android:title=""
+        android:icon="@drawable/ic_battery_status"
+        app:showAsAction="always"/>
+    </group>
+
+    <group>
+    <item android:id="@+id/light_id_mode_action_menu"
+        android:title="@string/light_id_mode"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/lamp_mode_action_menu"
+        android:title="@string/lamp_mode"
+        app:showAsAction="ifRoom"/>
+    </group>
+
+    <group>
+    <item android:id="@+id/amb_light_action_menu"
+        android:title="@string/ambient_light_sensor"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/timer_action_menu"
+        android:icon="@drawable/ic_timer"
+        android:title="@string/turn_off_timer"
+        app:showAsAction="ifRoom"/>
+    </group>
+
+    <group>
+    <item android:id="@+id/website_action_menu"
+        android:title="@string/website"
+        app:showAsAction="ifRoom"/>
+    </group>
+</menu>

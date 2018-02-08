@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:label="x"
+    android:icon="@drawable/icon_action_bar"
+    android:logo="@drawable/icon_action_bar"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="biz.ftsdesign.iseethelight.MainActivity">
+
+    <include layout="@layout/action_bar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/not_connected"
+        android:id="@+id/connected"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignRight="@+id/buttonUpload"
+        android:layout_alignEnd="@+id/buttonUpload"
+        android:layout_below="@+id/main_toolbar" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:text="@string/light_emulator"
+        android:id="@+id/light"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
+        android:height="40dp"
+        android:textAlignment="center"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignRight="@+id/buttonUpload"
+        android:layout_alignEnd="@+id/buttonUpload"
+        android:layout_below="@+id/connected" />
+
+    <LinearLayout
+        android:id="@+id/colorButtons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/light"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/color_red"
+            android:id="@+id/buttonRed"
+            android:background="#ff0000"
+            android:textColor="@color/colorButtonColorText"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/color_green"
+            android:id="@+id/buttonGreen"
+            android:background="#00ff00"
+            android:textColor="@color/colorButtonColorText"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/color_blue"
+            android:id="@+id/buttonBlue"
+            android:background="#0000ff"
+            android:textColor="@color/colorButtonColorText"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/color_white"
+            android:id="@+id/buttonWhite"
+            android:background="#ffffff"
+            android:textColor="@color/colorButtonColorText"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/color_yellow"
+            android:id="@+id/buttonYellow"
+            android:background="#ffff00"
+            android:textColor="@color/colorButtonColorText"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/color_magenta"
+            android:id="@+id/buttonMagenta"
+            android:background="#ff00ff"
+            android:textColor="@color/colorButtonColorText"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/color_cyan"
+            android:id="@+id/buttonCyan"
+            android:background="#00ffff"
+            android:textColor="@color/colorButtonColorText"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_play"
+        android:id="@+id/buttonPlay"
+        android:layout_below="@+id/colorButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onPlay"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_upload"
+        android:id="@+id/buttonUpload"
+        android:onClick="onUpload"
+        android:layout_above="@+id/gridLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/buttonPlay"
+        android:id="@+id/gridLayout"
+        android:layout_margin="10dp"
+        android:onClick="onOpenHelp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interval_seconds"
+            android:id="@+id/textView3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerInterval"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginLeft="20dp" />
+
+    </GridLayout>
+
+</RelativeLayout>
